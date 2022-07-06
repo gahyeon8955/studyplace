@@ -1,0 +1,189 @@
+@import "reset.css";
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 25px;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 41px;
+    margin-right: 11px;
+}
+
+.logo-text1, .logo-text2 {
+    font-family: 'NanumSquare', sans-serif;
+    color:  #554A4A;
+    font-size: 23px;
+    padding-top: 3px;
+}
+
+.logo-text2 {
+    font-weight: 800;
+}
+
+.nav-link {
+    display: flex;
+}
+
+.nav-link li:link {
+    font-family: 'NanumSquare', sans-serif;
+    color:  #554A4A;
+    font-size: 30px;
+    text-decoration: none;
+}
+.community-link, .login-link {
+    text-decoration: none;
+    padding: 3px 0px 0px 30px;
+    
+}
+.community-link:link, .login-link:link, .community-link:visited, .login-link:visited{
+    font-family: 'NanumSquare', sans-serif;
+    color:  #554A4A;
+    font-size: 17.5px;
+}
+
+.body-wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+.body-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px 60px 0px;
+}
+
+.footer {
+    width: 100%;
+    height: 120px;
+    background-color: #F4F4F4;
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo-box {
+    padding: 0px 70px;
+}
+
+.footer-logo {
+    display: flex;
+    margin-bottom: 6px;
+}
+
+.copyright {
+    font-family: 'NanumSquare', sans-serif;
+    color:  #554A4A;
+    font-size: 14px;
+}
+
+.footer-email, .footer-instagram{
+    width: 24px;
+    margin-right: 6px;
+}
+
+.contact-text {
+    font-family: 'NanumSquare', sans-serif;
+    color:  #554A4A;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.home-question-1 {
+    font-family: 'S-CoreDream-4Regular';
+    font-size: 22.5px;
+    color: #B9B7AE;
+}
+
+.home-question-2 {
+    font-family: 'S-CoreDream-4Regular';
+    font-size: 22.5px;
+    color: #554A4A;
+}
+
+.home-cafe, .home-library, .home-studycafe {
+    width: 670px;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px #B2B2B2;
+}
+
+.home-cafe {
+    background-image: url(../images/cafe.png);
+    margin-top: 14px;
+}
+
+.home-library {
+    background-image: url(../images/library.png);
+    margin-top: 25px;
+}
+
+.home-studycafe {
+    background-image: url(../images/studycafe.png);
+    margin-top: 25px;
+}
+
+.home-cafe-text, .home-library-text, .home-studycafe-text {
+    position: relative;
+    font-family: 'NanumSquare', sans-serif;
+    font-size: 22px;
+}
+
+.home-cafe-text {
+    left: 610px;
+    top: 18px;
+    color: white;
+}
+
+.home-library-text {
+    left: 590px;
+    top: 18px;
+    color: #554A4A;
+}
+
+.home-studycafe-text {
+    left: 550px;
+    top: 18px;
+    color: white;
+}
+.home-shortcut-box {
+    width: 113px;
+    height: 30px;
+    display: flex;
+    background-color: #554A4A;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    position: relative;
+    left: 538px;
+    top: 80px;
+}
+.home-shortcut-img {
+    width: 18px;
+    height: 17px;
+    margin-left: 9px;
+}
+
+.home-shortcut-box > span {
+    color: white;
+    position: relative;
+    left: 9px;
+    margin-top: 1px;
+    font-size: 14.5px;
+}
