@@ -1,0 +1,158 @@
+@import "reset.css";
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.list-body-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.place-list-box {
+    width: 47%;
+    height: 600px;
+    margin-left: 45px;
+}
+
+.list-top-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid #B9B7AE;
+    padding: 10px 11px;
+}
+.filter-img {
+    width: 25px;
+}
+
+.filter-box {
+    display: flex;
+    align-items: center;
+}
+
+.list-cafe-text {
+    font-family: 'NanumSquare', sans-serif;
+    color: #554A4A;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.list-filter-text {
+    font-family: 'NanumSquare', sans-serif;
+    color: #554A4A;
+    margin-left: 5px;
+}
+
+.place-list-map-box {
+    width: 45%;
+    height: 600px;
+    background-image: url(../images/map.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.search {
+    background-color: white;
+    width: 500px;
+    height: 41px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 2px 2px 6px #CBCBCB;
+    margin-top: 40px;
+}
+
+.magnifier-img {
+    width: 27px;
+    margin-right: 13px;
+}
+
+.search > input:focus {
+    outline: none;
+}
+.search > input::placeholder {
+    font-family: 'NanumSquare', sans-serif;
+    color: #CAC8C2;
+    font-size: 15px;
+}
+.search > input {
+    width: 420px;
+    margin-left: 15px;
+}
+
+.place-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 25px 14px;
+}
+
+.place-box {
+    width: 303px;
+    height: 245px;
+    border-radius: 9px;
+    box-shadow: 1.5px 1.5px 6px #D9D9D9;
+}
+
+.place-name-box {
+    padding : 15px 15px 7px 15px;
+}
+
+.place-img {
+    background-image: url(../images/twosome.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 150px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+
+.place-name {
+    font-family: 'NanumSquare', sans-serif;
+    color: #575757;
+    font-size: 17px;
+}
+
+.place-rating {
+    font-family: 'NanumSquare', sans-serif;
+    color: #918070;
+    font-size: 16px;
+}
+
+.place-short-address {
+    font-family: 'NanumSquare', sans-serif;
+    color: #B9B7AE;
+    font-size: 13px;
+    padding-left: 15px;
+}
+.place-view-write-box {
+    display: flex;
+    padding: 16px 0px 15px 15px
+}
+.place-view-box, .place-write-box {
+    display: flex;
+    align-items: center;
+}
+.list-view-img {
+    width: 15px;
+}
+
+.list-pen-img {
+    width: 12px;
+}
+
+.list-view-count, .list-write-count {
+    font-family: 'NanumSquare', sans-serif;
+    color: #B9B7AE;
+    font-size: 8px;
+    margin-left: 3px;
+    margin-right: 16px;
+}

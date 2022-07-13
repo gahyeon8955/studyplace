@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="kr">
+    <head>
+        <meta charset="utf-8">
+        <title>StudyPlace</title>
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        <link rel="stylesheet" href="{% static 'css/placelist.css' %}">
+    </head>
+
+    <body>
+        <nav id="top-menu">
+            <div class="logo-box">
+                <img class="logo-image" src="{% static 'images/logo.png' %}">
+                <p class="logo-text1">Study</p>
+                <p class="logo-text2">Place</p>
+            </div>
+            <ul class="nav-link">
+                <li><a href="#" class="community-link">커뮤니티</a></li>
+                <li><a href="#" class="login-link">로그인</a></li>
+            </ul>
+        </nav>
+        <div class="list-body-wrapper">
+            <div class="list-body-content">
+                <div class="place-list-box">
+                    <div class="list-top-box">
+                        <span class="list-cafe-text">카페</span>
+                        <span class="filter-box">
+                            <img class="filter-img" src="{% static 'images/filter.png' %}">
+                            <span class="list-filter-text">필터</span>
+                        </span>
+                    </div>
+                    <div class="place-list">
+                        <div class="place-box">
+                            <div class="place-img"></div>
+                            <div class="place-name-box">
+                                <span class="place-name">투썸플레이스 북정점</span>
+                                <span class="place-rating">4.5</span>
+                            </div>
+                            <div class="place-short-address">양산시 북정동</div>
+                            <div class="place-view-write-box">
+                                <span class="place-view-box">
+                                    <img class="list-view-img" src="{% static 'images/view.png' %}">
+                                    <span class="list-view-count">124</span>
+                                </span>
+                                <span class="place-write-box">
+                                    <img class="list-pen-img" src="{% static 'images/pen.png' %}">
+                                    <span class="list-write-count">31</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="place-box">
+                            <div class="place-img"></div>
+                            <div class="place-name-box">
+                                <span class="place-name">투썸플레이스 북정점</span>
+                                <span class="place-rating">4.5</span>
+                            </div>
+                            <div class="place-short-address">양산시 북정동</div>
+                            <div class="place-view-write-box">
+                                <span class="place-view-box">
+                                    <img class="list-view-img" src="{% static 'images/view.png' %}">
+                                    <span class="list-view-count">124</span>
+                                </span>
+                                <span class="place-write-box">
+                                    <img class="list-pen-img" src="{% static 'images/pen.png' %}">
+                                    <span class="list-write-count">31</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="place-list-map-box">
+                    <div class="search">
+                        <input type="text" placeholder="지역 검색" style="border:0 solid black">
+                        <img class="magnifier-img" src="{% static 'images/magnifier.png' %}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-logo-box">
+                <div class="footer-logo">
+                    <p class="logo-text1">Study</p>
+                    <p class="logo-text2">Place</p>
+                </div>
+                <p class="copyright">Copyright©스터디플레이스</p>
+            </div>
+            <div class="contact-box">
+                <p class="contact-text">Contact</p>
+                <div>
+                    <img class="footer-email" src="{% static 'images/email.png' %}">
+                    <img class="footer-instagram" src="{% static 'images/instagram.png' %}">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
