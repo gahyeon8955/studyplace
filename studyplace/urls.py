@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mainapp.views.home, name='home'),
     path('placelist/', mainapp.views.placelist, name='placelist'),
+    path('placelist/<int:place_id>/', mainapp.views.detail, name='detail'),
 ]
