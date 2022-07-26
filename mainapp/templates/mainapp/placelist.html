@@ -23,8 +23,7 @@
     </nav>
     {% for place in places.all %}
     <div class="container">
-        <h1>{{ place.name }}</h1>
-        <p>{{ place.address }}</p>
+        <p>{{ place.address }}<a href="{% url 'detail' place.id %}">...more</a></p>
     </div>
     {% endfor %}
     <div class="list-body-wrapper">

@@ -22,7 +22,9 @@
     </nav>
     <div class="body-wrapper">
         <div class="body-content">
-            <h1>디테일 페이지입니다.</h1>
+            <h1>{{ place.name }}</h1>
+            <p>{{ place.address }}</p>
+            <a href="{% url 'home' %}">돌아가기</a>
         </div>
     </div>
     <div class="footer">
