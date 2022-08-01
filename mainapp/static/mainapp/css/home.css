@@ -45,12 +45,12 @@
     font-size: 30px;
     text-decoration: none;
 }
-.community-link, .login-link {
+.community-link, .login-link, .new-link {
     text-decoration: none;
     padding: 3px 0px 0px 30px;
     
 }
-.community-link:link, .login-link:link, .community-link:visited, .login-link:visited{
+.community-link:link, .login-link:link, .community-link:visited, .login-link:visited, .new-link:link, .new-link:visited{
     font-family: 'NanumSquare', sans-serif;
     color:  #554A4A;
     font-size: 17.5px;
@@ -187,3 +187,5 @@
     margin-top: 1px;
     font-size: 14.5px;
 }
+
+a { text-decoration:none }

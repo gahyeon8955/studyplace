@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
+from django.conf import settings
 import mainapp.views
 
 
@@ -24,5 +26,6 @@ urlpatterns = [
     path('placelist/', mainapp.views.placelist, name='placelist'),
     path('placelist/<int:place_id>/', mainapp.views.detail, name='detail'),
     path('placelist/new/', mainapp.views.new, name='new'),
-    path('blog/create/', mainapp.views.create, name='create'),
+    path('placelist/create/', mainapp.views.create, name='create'),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

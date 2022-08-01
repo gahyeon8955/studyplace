@@ -5,17 +5,20 @@
 <head>
     <meta charset="utf-8">
     <title>StudyPlace</title>
-    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'mainapp/css/home.css' %}">
 </head>
 
 <body>
     <nav id="top-menu">
-        <div class="logo-box">
-            <img class="logo-image" src="{% static 'images/logo.png' %}">
-            <p class="logo-text1">Study</p>
-            <p class="logo-text2">Place</p>
-        </div>
+        <a href="{% url 'home' %}">
+            <div class="logo-box">
+                <img class="logo-image" src="{% static 'mainapp/images/logo.png' %}">
+                <p class="logo-text1">Study</p>
+                <p class="logo-text2">Place</p>
+            </div>
+        </a>
         <ul class="nav-link">
+            <li><a href="{% url 'new' %}" class="new-link">글쓰기</a></li>
             <li><a href="#" class="community-link">커뮤니티</a></li>
             <li><a href="#" class="login-link">로그인</a></li>
         </ul>
@@ -23,27 +26,28 @@
     <div class="body-wrapper">
         <div class="body-content">
             <div>
-                <span class="home-question-1">오늘의</span><span class="home-question-2"> 공부 장소</span><span class="home-question-1">는 어디인가요?</span>
+                <span class="home-question-1">오늘의</span><span class="home-question-2"> 공부 장소</span><span
+                    class="home-question-1">는 어디인가요?</span>
             </div>
             <div class="home-cafe">
                 <span class="home-cafe-text">카페</span>
                 <span class="home-shortcut-box">
                     <span>바로가기</span>
-                    <img class="home-shortcut-img" src="{% static 'images/next.png' %}">
+                    <img class="home-shortcut-img" src="{% static 'mainapp/images/next.png' %}">
                 </span>
             </div>
             <div class="home-library">
                 <span class="home-library-text">도서관</span>
                 <span class="home-shortcut-box">
                     <span>바로가기</span>
-                    <img class="home-shortcut-img" src="{% static 'images/next.png' %}">
+                    <img class="home-shortcut-img" src="{% static 'mainapp/images/next.png' %}">
                 </span>
             </div>
             <div class="home-studycafe">
                 <span class="home-studycafe-text">스터디카페</span>
                 <span class="home-shortcut-box">
                     <span>바로가기</span>
-                    <img class="home-shortcut-img" src="{% static 'images/next.png' %}">
+                    <img class="home-shortcut-img" src="{% static 'mainapp/images/next.png' %}">
                 </span>
             </div>
         </div>
@@ -59,8 +63,8 @@
         <div class="contact-box">
             <p class="contact-text">Contact</p>
             <div>
-                <img class="footer-email" src="{% static 'images/email.png' %}">
-                <img class="footer-instagram" src="{% static 'images/instagram.png' %}">
+                <img class="footer-email" src="{% static 'mainapp/images/email.png' %}">
+                <img class="footer-instagram" src="{% static 'mainapp/images/instagram.png' %}">
             </div>
         </div>
     </div>
