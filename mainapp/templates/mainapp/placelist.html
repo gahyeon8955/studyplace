@@ -38,7 +38,8 @@
                     {% for place in places.all %}
                     <a href="{% url 'detail' place.id %}">
                         <div class="place-box">
-                            <div class="place-img"></div>
+                            <!-- <div class="place-img"></div> -->
+                            <div class="place-img"><img src="{{ place.get_photo_url }}"/></div>
                             <div class="place-name-box">
                                 <span class="place-name">{{ place.name }}</span>
                                 <span class="place-rating">4.5</span>
