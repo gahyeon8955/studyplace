@@ -1,65 +1,26 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="kr">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="utf-8">
-    <title>StudyPlace</title>
-    <link rel="stylesheet" href="{% static 'mainapp/css/home.css' %}">
-</head>
-
-<body>
-    <nav id="top-menu">
-        <a href="{% url 'home' %}">
-            <div class="logo-box">
-                <img class="logo-image" src="{% static 'mainapp/images/logo.png' %}">
-                <p class="logo-text1">Study</p>
-                <p class="logo-text2">Place</p>
-            </div>
-        </a>
-        <ul class="nav-link">
-            <li><a href="{% url 'new' %}" class="new-link">글쓰기</a></li>
-            <li><a href="#" class="community-link">커뮤니티</a></li>
-            <li><a href="#" class="login-link">로그인</a></li>
-        </ul>
-    </nav>
-    <div class="body-wrapper">
-        <div class="body-content">
-            <form action="{% url 'create' %}">
-                <h4>가게명: </h4>
-                <input type="text" name="name">
-                <br>
-                <br>
-                <h4>주소: </h4>
-                <input type="text" name="address">
-                <br>
-                <br>
-                <h4>전화번호: </h4>
-                <input type="text" name="phone_number">
-                <br>
-                <br>
-                <h4>영업시간: </h4>
-                <input type="text" name="business_hour">
-                <input type="submit" value="제출하기">
-            </form>
-        </div>
+{% block content %}
+<div class="body-wrapper">
+    <div class="body-content">
+        <form action="{% url 'mainapp:create' %}">
+            <h4>가게명: </h4>
+            <input type="text" name="name">
+            <br>
+            <br>
+            <h4>주소: </h4>
+            <input type="text" name="address">
+            <br>
+            <br>
+            <h4>전화번호: </h4>
+            <input type="text" name="phone_number">
+            <br>
+            <br>
+            <h4>영업시간: </h4>
+            <input type="text" name="business_hour">
+            <input type="submit" value="제출하기">
+        </form>
     </div>
-    <div class="footer">
-        <div class="footer-logo-box">
-            <div class="footer-logo">
-                <p class="logo-text1">Study</p>
-                <p class="logo-text2">Place</p>
-            </div>
-            <p class="copyright">Copyright©스터디플레이스</p>
-        </div>
-        <div class="contact-box">
-            <p class="contact-text">Contact</p>
-            <div>
-                <img class="footer-email" src="{% static 'mainapp/images/email.png' %}">
-                <img class="footer-instagram" src="{% static 'mainapp/images/instagram.png' %}">
-            </div>
-        </div>
-    </div>
-</body>
+</div>
 
-</html>
+{% endblock %}
