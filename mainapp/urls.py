@@ -10,5 +10,4 @@ urlpatterns = [
     path('', views.placelist, name='placelist'),
     path('<int:place_id>/', views.detail, name='detail'),
     path('new/', views.new, name='new'),
-    path('create/',views.create, name='create'),
 ]

@@ -3,22 +3,13 @@
 {% block content %}
 <div class="body-wrapper">
     <div class="body-content">
-        <form action="{% url 'mainapp:create' %}">
-            <h4>가게명: </h4>
-            <input type="text" name="name">
+        <form action="{% url 'mainapp:new' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table>
+                {{form.as_table}}
+            </table>
             <br>
-            <br>
-            <h4>주소: </h4>
-            <input type="text" name="address">
-            <br>
-            <br>
-            <h4>전화번호: </h4>
-            <input type="text" name="phone_number">
-            <br>
-            <br>
-            <h4>영업시간: </h4>
-            <input type="text" name="business_hour">
-            <input type="submit" value="제출하기">
+            <input class="btn btn-dark" type="submit" value="제출하기">
         </form>
     </div>
 </div>
