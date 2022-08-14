@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="body-wrapper">
+    <div class="body-content">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table>
+                {{form.as_table}}
+            </table>
+            <br>
+            <input class="btn btn-dark" type="submit" value="제출하기">
+        </form>
+    </div>
+</div>
+
+{% endblock %}
