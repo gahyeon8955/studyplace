@@ -1,6 +1,6 @@
-from re import L
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
+from django.core.paginator import Paginator
 
 from .models import Place
 from .forms import PlaceNew
@@ -10,8 +10,12 @@ def home(request):
     return render(request, 'mainapp/home.html')
 
 def placelist(request):
-    places = Place.objects
-    return render(request, 'mainapp/placelist.html', {'places':places})
+    places = Place.objects.all()
+    paginator = Paginator(places, 1)
+    page = request.GET.get('page',1)
+    page_obj = paginator.page(page)
+    page_range = paginator.get_elided_page_range(number=page)
+    return render(request, 'mainapp/placelist.html', {'places':places,'page_range':page_range, 'page_obj': page_obj})
 
 def detail(request, place_id):
     place = get_object_or_404(Place, pk=place_id)

@@ -17,7 +17,7 @@
                 </span>
             </div>
             <div class="place-list">
-                {% for place in places.all %}
+                {% for place in page_obj %}
                 <a href="{% url 'mainapp:detail' place.id %}">
                     <div class="place-box">
                         <div class="place-img"><img src="{{ place.get_photo_url }}" /></div>
@@ -39,27 +39,37 @@
                     </div>
                 </a>
                 {% endfor %}
-                <!-- <div class="place-box">
-                        <div class="place-img"></div>
-                        <div class="place-name-box">
-                            <span class="place-name">투썸플레이스 북정점</span>
-                            <span class="place-rating">4.5</span>
-                        </div>
-                        <div class="place-short-address">양산시 북정동</div>
-                        <div class="place-view-write-box">
-                            <span class="place-view-box">
-                                <img class="list-view-img" src="{% static 'images/view.png' %}">
-                                <span class="list-view-count">124</span>
-                            </span>
-                            <span class="place-write-box">
-                                <img class="list-pen-img" src="{% static 'images/pen.png' %}">
-                                <span class="list-write-count">31</span>
-                            </span>
-                        </div>
-                    </div> -->
+
+                <div>
+                    {% if page_obj.has_previous %}
+                    <span><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></span>
+                    {% else %}
+                    <span><span>&laquo;</span></span>
+                    {% endif %}
+
+                    {% for i in page_range|default_if_none:page_obj.paginator.get_elided_page_range %}
+                    {% if page_obj.number == i %}
+                    <span><span>{{ i }}<span>(current)</span></span></span>
+                    {% else %}
+                    {% if i == page_obj.paginator.ELLIPSIS %}
+                    <span><span>{{ i }}</span></span>
+                    {% else %}
+                    <span><a href="?page={{ i }}">{{ i }}</a></span>
+                    {% endif %}
+                    {% endif %}
+                    {% endfor %}
+                    
+                    {% if page_obj.has_next %}
+                    <span><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></span>
+                    {% else %}
+                    <span><span>&raquo;</span></span>
+                    {% endif %}
+                </div>
+
             </div>
 
         </div>
+
         <div class="place-list-map-box">
             <div class="search">
                 <input type="text" placeholder="지역 검색" style="border:0 solid black">
