@@ -17,6 +17,7 @@
                 </span>
             </div>
             <div class="place-list">
+
                 {% for place in page_obj %}
                 <a href="{% url 'mainapp:detail' place.id %}">
                     <div class="place-box">
@@ -25,7 +26,7 @@
                             <span class="place-name">{{ place.name }}</span>
                             <span class="place-rating">4.5</span>
                         </div>
-                        <div class="place-short-address">{{ place.address}}</div>
+                        <div class="place-short-address">{{ place.address }}</div>
                         <div class="place-view-write-box">
                             <span class="place-view-box">
                                 <img class="list-view-img" src="{% static 'mainapp/images/view.png' %}">
@@ -40,29 +41,30 @@
                 </a>
                 {% endfor %}
 
-                <div>
+
+                <div class="pagination-box">
                     {% if page_obj.has_previous %}
-                    <span><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></span>
+                    <a href="?page={{ page_obj.previous_page_number }}"><img class="page-arrow" src="{% static 'mainapp/images/next-left.png' %}"></a>
                     {% else %}
-                    <span><span>&laquo;</span></span>
+                    <span><img class="page-arrow" src="{% static 'mainapp/images/next-left.png' %}"></span>
                     {% endif %}
 
                     {% for i in page_range|default_if_none:page_obj.paginator.get_elided_page_range %}
                     {% if page_obj.number == i %}
-                    <span><span>{{ i }}<span>(current)</span></span></span>
+                    <span><span class="active-page-item">{{ i }}</span></span>
                     {% else %}
                     {% if i == page_obj.paginator.ELLIPSIS %}
-                    <span><span>{{ i }}</span></span>
+                    <span><span class="page-item">{{ i }}</span></span>
                     {% else %}
-                    <span><a href="?page={{ i }}">{{ i }}</a></span>
+                    <span class="page-item"><a href="?page={{ i }}">{{ i }}</a></span>
                     {% endif %}
                     {% endif %}
                     {% endfor %}
-                    
+
                     {% if page_obj.has_next %}
-                    <span><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></span>
+                    <a href="?page={{ page_obj.next_page_number }}"><img class="page-arrow" src="{% static 'mainapp/images/next2.png' %}"></a>
                     {% else %}
-                    <span><span>&raquo;</span></span>
+                    <span><img class="page-arrow" src="{% static 'mainapp/images/next2.png' %}"></span>
                     {% endif %}
                 </div>
 

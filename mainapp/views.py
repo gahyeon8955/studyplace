@@ -11,7 +11,7 @@ def home(request):
 
 def placelist(request):
     places = Place.objects.all()
-    paginator = Paginator(places, 1)
+    paginator = Paginator(places, 6)
     page = request.GET.get('page',1)
     page_obj = paginator.page(page)
     page_range = paginator.get_elided_page_range(number=page)
