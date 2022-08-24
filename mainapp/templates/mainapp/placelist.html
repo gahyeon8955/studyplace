@@ -17,9 +17,10 @@
                 </span>
             </div>
             <div class="place-list">
+                <li><a href="{% url 'mainapp:new' category_name %}" class="new-link">글쓰기</a></li>
 
                 {% for place in page_obj %}
-                <a href="{% url 'mainapp:detail' place.id %}">
+                <a href="{% url 'mainapp:detail' category_name place.id %}">
                     <div class="place-box">
                         <div class="place-img"><img src="{{ place.get_photo_url }}" /></div>
                         <div class="place-name-box">

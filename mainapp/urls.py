@@ -7,9 +7,9 @@ from . import views
 app_name="mainapp"
 
 urlpatterns = [
-    path('', views.placelist, name='placelist'),
-    path('<int:place_id>/', views.detail, name='detail'),
-    path('new/', views.new, name='new'),
-    path('<int:place_id>/update/', views.update, name='update'),
-    path('<int:place_id>/delete/', views.delete, name='delete'),
+    path('<str:category_name>/', views.placelist, name='placelist'),
+    path('<str:category_name>/<int:place_id>/', views.detail, name='detail'),
+    path('<str:category_name>/new/', views.new, name='new'),
+    path('<str:category_name>/<int:place_id>/update/', views.update, name='update'),
+    path('<str:category_name>/<int:place_id>/delete/', views.delete, name='delete'),
 ]

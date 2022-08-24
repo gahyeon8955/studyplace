@@ -5,10 +5,10 @@
             <div class="body-content">
                 <h1>{{ place.name }}</h1>
                 <p>{{ place.address }}</p>
-                <img src="{{ place.get_photo_url }}" />
-                <a href="{% url 'mainapp:placelist' %}">돌아가기</a>
-                <a href="{% url 'mainapp:update' place.id %}">수정</a>
-                <a href="{% url 'mainapp:delete' place.id %}">삭제</a>
+                <img src="{{ place.get_photo_url }}"/>
+                <a href="{% url 'mainapp:placelist' category.name %}">돌아가기</a>
+                <a href="{% url 'mainapp:update' category.name place.id %}">수정</a>
+                <a href="{% url 'mainapp:delete' category.name place.id %}">삭제</a>
             </div>
         </div>
 {% endblock %}

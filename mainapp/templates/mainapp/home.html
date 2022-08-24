@@ -13,24 +13,27 @@
         <div class="home-cafe">
             <span class="home-cafe-text">카페</span>
             <span class="home-shortcut-box">
-                <span>바로가기</span>
+                <a href="{% url 'mainapp:placelist' category_name='카페' %}"><span>바로가기</span></a>
                 <img class="home-shortcut-img" src="{% static 'mainapp/images/next.png' %}">
             </span>
         </div>
+        
         <div class="home-library">
             <span class="home-library-text">도서관</span>
             <span class="home-shortcut-box">
-                <span>바로가기</span>
+                <a href="{% url 'mainapp:placelist' category_name='도서관' %}"><span>바로가기</span></a>
                 <img class="home-shortcut-img" src="{% static 'mainapp/images/next.png' %}">
             </span>
         </div>
+        
         <div class="home-studycafe">
             <span class="home-studycafe-text">스터디카페</span>
             <span class="home-shortcut-box">
-                <span>바로가기</span>
+                <a href="{% url 'mainapp:placelist' category_name='스터디카페' %}"><span>바로가기</span></a>
                 <img class="home-shortcut-img" src="{% static 'mainapp/images/next.png' %}">
             </span>
         </div>
+
     </div>
 </div>
 
