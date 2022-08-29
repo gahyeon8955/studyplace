@@ -19,7 +19,16 @@
         </a>
         <ul class="nav-link">
             <li><a href="#" class="community-link">커뮤니티</a></li>
-            <li><a href="#" class="login-link">로그인</a></li>
+            {% if user.is_authenticated %}
+            <li><a class="login-link" href="javascript:{document.getElementById('logout').submit()}">로그아웃</a>
+                <form id="logout" method="POST" action="{% url 'accounts:logout' %}">
+                    {% csrf_token %} <input type="hidden" />
+                </form>
+            </li>
+            <div>환영합니다. {{ user.username }} 님!</div>
+            {% else %}
+            <li><a href="{% url 'accounts:login' %}" class="login-link">로그인</a></li>
+            {% endif %}
         </ul>
     </nav>
     {% block content %}
