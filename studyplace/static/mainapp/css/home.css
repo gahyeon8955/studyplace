@@ -180,7 +180,8 @@
     margin-left: 9px;
 }
 
-.home-shortcut-box > span {
+.home-shortcut-box > a > span {
+    display: block;
     color: white;
     position: relative;
     left: 9px;

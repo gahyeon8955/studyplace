@@ -1,14 +1,17 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
+
+<link rel="stylesheet" href="{% static 'accounts/css/login.css' %}">
 
 {% if error %}
 {{ error }}
 {% endif %}
 
-<h1>Login</h1>
 
-<form method="POST" action="{% url 'accounts:login'%}">
+<!-- <form method="POST" action="{% url 'accounts:login'%}">
 
     {% csrf_token %}
     Username:
@@ -21,6 +24,35 @@
     <br>
     <br>
     <input class="btn btn-primary" type="submit" value="Login">
-</form>
+</form> -->
 
+<div class="login-box">
+    <h1 class="login-title">로그인</h1>
+
+    <form class='login-form' method="POST" action="{% url 'accounts:login' %}">
+
+        {% csrf_token %}
+        <div class="login-input-box">
+        <input name="username" type="text" value="" placeholder="아이디">
+        </div>
+ 
+        <div class="login-input-box">
+        <input name="password" type="password" value="" placeholder="비밀번호">
+        </div>
+
+        <input class="login-button" type="submit" value="로그인">
+    
+    </form>
+    <div class="login-etc-box">
+        <a class="login-find-pw">비밀번호 찾기</a><span class="login-etc-separator">|</span><a href="{% url 'accounts:signup' %}">회원가입</a>
+    </div>
+    <div class="login-kakao-box">
+        <img class="login-kakao-logo" src="{% static 'accounts/images/kakao.png' %}">
+        <span>카카오로 로그인 하기</span>
+    </div>
+    <div class="login-google-box">
+        <img class="login-google-logo" src="{% static 'accounts/images/google.png' %}">
+        <span>구글로 로그인 하기</span>
+    </div>
+</div>
 {% endblock %}

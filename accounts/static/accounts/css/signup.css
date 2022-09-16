@@ -1,0 +1,73 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.signup-box {
+    width: 425px;
+    height:490px;
+    margin: 45px auto 70px auto;
+    border: 0.7px solid #B9B7AE;
+    border-radius: 8px;
+}
+
+.signup-title {
+    font-family: 'NanumSquare', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: #554A4A;
+    font-size: 22px;
+    margin: 35px 0px 20px 0px;
+}
+
+.siginup-text-item {
+    font-family: 'NanumSquare', sans-serif;
+    font-size: 15px;
+    color: #554A4A;
+    margin: 0px 0px 10px 2px;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-input-box {
+    margin: 0px auto 20px auto;
+}
+
+.signup-input-box > input {
+    width: 280px;
+    height: 29px;
+    border: 0.7px solid #B9B7AE;
+    border-radius: 6px;
+    padding-left: 9px;
+}
+
+.signup-input-box > input:focus {
+    outline: none;
+    box-shadow: 0 0 3px #B9B7AE;
+}
+
+.signup-input-box > input::placeholder {
+    font-family: 'NanumSquare', sans-serif;
+    color: #CAC8C2;
+    font-weight: 100;
+    font-size: 13px;
+}
+
+.signup-button {
+    width: 294px;
+    height: 35px;
+    background-color: #554A4A;
+    margin: 0px auto 20px auto;
+    font-family: 'NanumSquare', sans-serif;
+    border-radius: 6px;
+    border:none;
+    color: white;
+    font-size: 14px;
+    margin-top: 17px;
+}

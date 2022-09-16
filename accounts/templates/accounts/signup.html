@@ -1,29 +1,41 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
+
+<link rel="stylesheet" href="{% static 'accounts/css/signup.css' %}">
 
 {% if error %}
 {{ error }}
 {% endif %}
-<h1>Sign Up!</h1>
 
-<form method="POST" action="{% url 'accounts:signup' %}">
 
-    {% csrf_token %}
-    Username:
-    <br>
-    <input name="username" type="text" value="">
-    <br>
-    Password:
-    <br>
-    <input name="password1" type="password" value="">
-    <br>
-    Confirm Password:
-    <br>
-    <input name="password2" type="password" value="">
-    <br>
-    <br>
-    <input class="btn btn-primary" type="submit" value="Sign Up!">
-</form>
+<div class="signup-box">
+    <h1 class="signup-title">회원가입</h1>
+
+    <form class='signup-form' method="POST" action="{% url 'accounts:signup' %}">
+
+        {% csrf_token %}
+        <div class="signup-input-box">
+            <div class="siginup-text-item">아이디</div>
+        <input name="username" type="text" value="" placeholder="아이디 입력(5~11자)">
+        </div>
+        <!-- <div class="signup-input-box">
+            <div class="siginup-text-item">이메일</div>
+            <input name="email" type="text" value="" placeholder="이메일">
+        </div> -->
+        <div class="signup-input-box">
+        <div class="siginup-text-item">비밀번호</div>
+        <input name="password1" type="password" value="" placeholder="비밀번호 입력(숫자, 영문, 특수문자 조합 6자 이상)">
+        </div>
+        <div class="signup-input-box">
+            <div class="siginup-text-item">비밀번호 확인</div>
+            <input name="password2" type="password" value="" placeholder="비밀번호 확인">
+        </div>
+
+        <input class="signup-button" type="submit" value="확인">
+    </form>
+</div>
 
 {% endblock %}

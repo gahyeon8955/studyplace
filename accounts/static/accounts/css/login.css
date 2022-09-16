@@ -1,0 +1,127 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.login-box {
+    width: 425px;
+    height:450px;
+    margin: 45px auto 70px auto;
+    border: 0.7px solid #B9B7AE;
+    border-radius: 8px;
+}
+
+.login-title {
+    font-family: 'NanumSquare', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: #554A4A;
+    font-size: 22px;
+    margin: 35px 0px 50px 0px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-input-box {
+    margin: 0px auto 17px auto;
+}
+
+.login-input-box > input {
+    width: 280px;
+    height: 29px;
+    border: 0.7px solid #B9B7AE;
+    border-radius: 6px;
+    padding-left: 9px;
+}
+
+.login-input-box > input:focus {
+    outline: none;
+    box-shadow: 0 0 3px #B9B7AE;
+}
+
+.login-input-box > input::placeholder {
+    font-family: 'NanumSquare', sans-serif;
+    color: #CAC8C2;
+    font-weight: 100;
+    font-size: 13px;
+}
+
+.login-button {
+    width: 294px;
+    height: 35px;
+    background-color: #554A4A;
+    margin: 0px auto 12px auto;
+    font-family: 'NanumSquare', sans-serif;
+    border-radius: 6px;
+    border:none;
+    color: white;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+.login-etc-box {
+    display: flex;
+    justify-content: center;
+    font-family: 'NanumSquare', sans-serif;
+    font-size: 13px;
+}
+
+.login-etc-box a:link, .login-etc-box a:visited {
+    color: #554A4A;
+}
+
+.login-find-pw, .login-etc-separator {
+    color: #554A4A;
+    font-family: 'NanumSquare', sans-serif;
+}
+
+.login-etc-separator{
+    margin: 0px 15px;
+}
+
+.login-kakao-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'NanumSquare', sans-serif;
+    width: 294px;
+    height: 35px;
+    border-radius: 6px;
+    background-color: #FFEB3B;
+    color: #3E2723;
+    margin: 30px auto 0px auto;
+    font-size: 13px;
+}
+
+.login-kakao-logo{
+    width: 30px;
+    margin-right: 6px;
+}
+
+.login-google-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'NanumSquare', sans-serif;
+    width: 294px;
+    height: 35px;
+    border-radius: 6px;
+    color: #3E2723;
+    margin: 14px auto 0px auto;
+    font-size: 13px;
+    border: 0.7px solid #B9B7AE;
+    border-radius: 6px;
+}
+
+.login-google-logo{
+    width: 18px;
+    margin-right: 10px;
+}
+a { text-decoration:none; }
+
