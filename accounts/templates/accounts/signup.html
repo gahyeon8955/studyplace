@@ -10,6 +10,9 @@
 {{ error }}
 {% endif %}
 
+{% if errors %}
+{{ errors }}
+{% endif %}
 
 <div class="signup-box">
     <h1 class="signup-title">회원가입</h1>
@@ -21,10 +24,10 @@
             <div class="siginup-text-item">아이디</div>
         <input name="username" type="text" value="" placeholder="아이디 입력(5~11자)">
         </div>
-        <!-- <div class="signup-input-box">
+        <div class="signup-input-box">
             <div class="siginup-text-item">이메일</div>
             <input name="email" type="text" value="" placeholder="이메일">
-        </div> -->
+        </div>
         <div class="signup-input-box">
         <div class="siginup-text-item">비밀번호</div>
         <input name="password1" type="password" value="" placeholder="비밀번호 입력(숫자, 영문, 특수문자 조합 6자 이상)">
